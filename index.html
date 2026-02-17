@@ -648,7 +648,8 @@
             downloadBtn.style.display = 'none';
             downloadBtn.disabled = true;
             resetBtn.style.display = 'none';
-            
+
+            video.classList.remove('hidden');
             await startCamera();
             
             startBtn.disabled = true;
