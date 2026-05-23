@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.5, maximum-scale=3.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.5, maximum-scale=3.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.62">
     <title>Photo Booth</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Avenir:wght@400;500;600&display=swap');
@@ -28,6 +29,8 @@
             --champagne: #E6D5C3;
             --deep-plum: #5D4E6D;
             --sage: #9CAF88;
+            --default-blue: #004659;
+            --default-beige: #CBBFB9;
         }
         
         * {
@@ -69,7 +72,7 @@
         .container {
             max-width: 560px;
             width: 100%;
-            background: #004659;
+            background: var(--default-blue);
             border-radius: 30px;
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.571),/*main window glow*/
@@ -125,11 +128,11 @@
         }
         
         .camera-section {
-            background: #004659;
+            background: var(--default-blue);
             border-radius: 30px;
             padding: 0px;
             margin-bottom: 0px;
-            box-shadow: inset 0 2px 8px #004659;/* main window background shadow */
+            box-shadow: inset 0 2px 8px var(--default-blue);/* main window background shadow */
             animation: slideUp 0.6s ease-out 0.3s both;
             position: relative;
             overflow: hidden;
@@ -226,11 +229,11 @@
         
         .btn-primary {
             background: #F7E6DD;/*start button color*/
-            color: #004659;
+            color: var(--default-blue);
         }
         
         .btn-primary:hover {
-            background: #CBBFB9;/*button hover color*/
+            background: var(--default-beige);/*button hover color*/
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);/*button hover shadow*/
         }
@@ -243,12 +246,12 @@
         
         .btn-secondary {/* download / start over button background and text color*/
             background:  #F7E6DD;/*start button color*/
-            color: #004659;
+            color: var(--default-blue);
             margin-bottom: 30px;
         }
         
         .btn-secondary:hover {
-            background: #CBBFB9;/*button hover color*/
+            background: var(--default-beige);/*button hover color*/
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(183, 110, 121, 0.4);/*button hover shadow*/
         }
@@ -270,14 +273,14 @@
             padding: 10px;
             font-size: 1.2em;
             background: #F7E6DD;
-            color: #004659;
+            color: var(--default-blue);
             border: 0px solid var(--champagne);
         }
         
         .filter-btn.active {
             background: #6A9383;/*filters color*/
             border-color: #6A9383;
-            color: #004659;/*text*/
+            color: var(--default-blue);/*text*/
         }
         
         .preview-strip {
@@ -647,7 +650,7 @@
             const textYPos = padding + (4 * photoHeight) + (3 * photoPadding) + 60;
             
             // Main text                                                                         text colors
-            stripCtx.fillStyle = '#004659';
+            stripCtx.fillStyle = 'var(--default-blue)';
             stripCtx.font = '32px "Avenir", Medium';
             stripCtx.letterSpacing = '7px';
             stripCtx.textAlign = 'center';
