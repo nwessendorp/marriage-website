@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.5, maximum-scale=3.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=0.62">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.62"> -->
+    <meta name="viewport" content="width=1667, user-scalable=yes, minimum-scale=0.5, maximum-scale=3.0">
     <title>Photo Booth</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Avenir:wght@400;500;600&display=swap');
@@ -424,14 +425,6 @@
     <canvas id="canvas"></canvas>
     
     <script>
-        // Force zoom on iPad
-        if (navigator.userAgent.match(/iPad/i)) {
-            const viewport = document.querySelector('meta[name="viewport"]');
-            viewport.setAttribute('content', 'width=device-width, initial-scale=0.62, maximum-scale=3.0, user-scalable=yes');
-            
-            // Double-ensure with CSS zoom
-            document.documentElement.style.zoom = 0.62;
-        }
         const video = document.getElementById('video');
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
